@@ -1,0 +1,22 @@
+# Build
+bin/
+obj/
+*.user
+*.vspscc
+*.suo
+
+# Secrets
+appsettings.*.json
+*.db
+*.bak
+
+# User secrets
+*.vscode/
+*.idea/
+*.sln.docstates
+
+# Logs
+*.log
+
+# EF Migrations backup
+Migrations/
