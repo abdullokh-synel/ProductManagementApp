@@ -80,7 +80,6 @@ public class ProductController(ILogger<ProductController> logger, IProductServic
         return RedirectToAction(nameof(Index));
     }
 
-
     private async Task<IActionResult> GetProductById(int id, string viewName)
     {
         var product = await productService.GetProductById(id);

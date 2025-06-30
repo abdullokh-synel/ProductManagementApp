@@ -17,6 +17,3 @@ appsettings.*.json
 
 # Logs
 *.log
-
-# EF Migrations backup
-Migrations/

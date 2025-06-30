@@ -1,8 +1,6 @@
-// Data/SeedData.cs
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProductManagementApp.Models;
-using System;
 
 namespace ProductManagementApp.Data
 {
@@ -44,7 +42,7 @@ namespace ProductManagementApp.Data
                 }
                 else
                 {
-                    throw new Exception("Не удалось создать администратора: " + string.Join("; ", result.Errors.Select(e => e.Description)));
+                    throw new Exception("Error while adding admin: " + string.Join("; ", result.Errors.Select(e => e.Description)));
                 }
             }
 
@@ -67,7 +65,7 @@ namespace ProductManagementApp.Data
                 }
                 else
                 {
-                    throw new Exception("Не удалось создать пользователя: " + string.Join("; ", result.Errors.Select(e => e.Description)));
+                    throw new Exception("Error while adding user: " + string.Join("; ", result.Errors.Select(e => e.Description)));
                 }
             }
 

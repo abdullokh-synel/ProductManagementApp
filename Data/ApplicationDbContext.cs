@@ -20,7 +20,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             var audit = new ProductAudit
             {
                 ProductTitle = entry.Entity.Title,
-                ChangedBy = "Unknown", // Будет заменено в контроллере
+                ChangedBy = "Unknown",
                 ChangedAt = DateTime.UtcNow,
                 ChangeType = entry.State.ToString(),
                 OriginalData = System.Text.Json.JsonSerializer.Serialize(entry.OriginalValues.Properties.ToDictionary(p => p.Name, p => entry.OriginalValues[p])),
